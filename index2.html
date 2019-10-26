@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>送货单</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <div class="box">
+        <div class="box-top">
+            <div class="top-left top">
+                <p>收货地址:</p>
+                <!-- <input type="text"> -->
+            </div>
+            <div class="top">
+                <p style="margin-right:100px">日期:</p>
+                <!-- <input type="text"> -->
+            </div>
+        </div>
+        <table width="800" cellspacing="0" cellpadding="0" border="1">
+            <tr>
+                <th>货物名称</th>
+                <th>型号/规格</th>
+                <th>数量</th>
+                <th>重量</th>
+                <th>金额</th>
+                <th>备注</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="4">合计金额大写:</td>
+                <td>
+                    <p>单位名称:</p>
+                    <p>签字:</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">付款方式:</td>
+            </tr>
+        </table>
+        <button class="btn">点击</button>
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    
+    <script src="js/FileSaver.js"></script>
+        <script src="js/jquery.wordexport.js"></script>
+    <script>
+        $(function () {
+            $(".btn").click(function (event) {
+                $(".word").wordExport('word文档');
+            });
+        })
+    </script>
+</body>
+</html>
