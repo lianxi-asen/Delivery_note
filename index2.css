@@ -3,18 +3,11 @@
     padding:0;
     font-size: 16px;
 }
-.box-top{
-    display:flex;
-    justify-content:space-between;
-}
 .box{
     width: 800px;
     /* height:500px; */
-    background-color:rgb(241,211,213);
+    /* background-color:rgb(241,211,213); */
     margin:100px auto 0;
-}
-.top p{
-    display:inline-block;
 }
 table{
     width: 100%;
@@ -53,9 +46,9 @@ th:nth-child(5),td:nth-child(5){
 td:last-child,th:last-child{
     border-right:0;
 }
-tr:nth-child(4) td:nth-child(1),tr:nth-child(5) td{
+tr:nth-child(5) td:nth-child(1),tr:nth-child(5) td,tr:nth-child(1) td:nth-child(1){
     width: 534px;
 }
-tr:nth-child(4) td:nth-child(2){
+tr:nth-child(5) td:nth-child(2),tr:nth-child(1) td:nth-child(2){
     width: 261px;
 }
