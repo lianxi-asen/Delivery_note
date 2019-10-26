@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding:0;
+    font-size: 16px;
 }
 .box-top{
     display:flex;
@@ -47,37 +48,14 @@ th:nth-child(4),td:nth-child(4){
     width: 84px;
 }
 th:nth-child(5),td:nth-child(5){
-    width: 80px;
+    width:261px;
 }
 td:last-child,th:last-child{
     border-right:0;
 }
-th:nth-child(6),td:nth-child(6){
-    width: 185px;
-}
 tr:nth-child(4) td:nth-child(1),tr:nth-child(5) td{
-    width: 531px;
-}
-tr:nth-child(4){
-    position: relative;
-    border-bottom:0;
+    width: 534px;
 }
 tr:nth-child(4) td:nth-child(2){
-    position: absolute;
-    top:0;
-    right:0;
-    width: 266px;
-    height: 69px;
+    width: 261px;
 }
-tr:nth-child(4) td:nth-child(2) p{
-    /* margin-top:5px;
-    margin-left:5px; */
-    margin:5px 0 0 5px;
-}
-tr:nth-child(4) td:nth-child(2) p:last-child{
-    margin-top:10px;
-}
-tr:nth-child(5) td{
-    border-top:1px solid #000;
-    border-right:1px solid #000;
-} 
