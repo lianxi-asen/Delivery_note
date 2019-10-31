@@ -40,5 +40,9 @@
         }
         recipient.innerHTML = obj.name[num]
         ContactPhone.innerHTML = obj.ophone[num]
+        if(this.value==""){
+            recipient.innerHTML = ""
+            ContactPhone.innerHTML = ""
+        }
     }
 })()
