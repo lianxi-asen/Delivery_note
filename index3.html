@@ -57,30 +57,44 @@
             display: inline-block;
             width: 100%;
             height: 40px;
-
+        }
+        .picl{
+            height:30px;
         }
         tr td{
+            overflow: auto;
             display:inline-block;
             border:0;
             border-right:1px dashed rgb(49,134,155);
             text-align: center;
             height:100%;
+            outline: none;
         }
-        tr:nth-child(1){
+        .picl td:nth-child(1),.picl td:nth-child(1){
+            width: 76%;
+            text-align: left;
+            border:0;
+        }
+        .picl td:nth-child(2),.picl td:nth-child(2){
+            width: 22%;
+            text-align: left;
+            border:0;
+        }
+        tr:nth-child(3){
             height:24px;
             font-size: 16px;
             font-weight: bold;
         }
-        tr:nth-child(1) td:nth-child(1),tr:nth-child(2) td:nth-child(1),  tr:nth-child(3) td:nth-child(1),  tr:nth-child(4) td:nth-child(1){
+        tr:nth-child(3) td:nth-child(1),tr:nth-child(4) td:nth-child(1),  tr:nth-child(5) td:nth-child(1),  tr:nth-child(6) td:nth-child(1){
             width: 180px;
         }
-        tr:nth-child(1) td:nth-child(2),tr:nth-child(2) td:nth-child(2),  tr:nth-child(3) td:nth-child(2),  tr:nth-child(4) td:nth-child(2){
+        tr:nth-child(3) td:nth-child(2),tr:nth-child(4) td:nth-child(2),  tr:nth-child(5) td:nth-child(2),  tr:nth-child(6) td:nth-child(2){
             width: 100px;
         }
-        tr:nth-child(1) td:nth-child(3),tr:nth-child(2) td:nth-child(3),  tr:nth-child(3) td:nth-child(3),  tr:nth-child(4) td:nth-child(3){
+        tr:nth-child(3) td:nth-child(3),tr:nth-child(4) td:nth-child(3),  tr:nth-child(5) td:nth-child(3),  tr:nth-child(6) td:nth-child(3){
             width: 44px;
         }
-        tr:nth-child(1) td:nth-child(4),tr:nth-child(2) td:nth-child(4),  tr:nth-child(3) td:nth-child(4),  tr:nth-child(4) td:nth-child(4){
+        tr:nth-child(3) td:nth-child(4),tr:nth-child(4) td:nth-child(4),  tr:nth-child(5) td:nth-child(4),  tr:nth-child(6) td:nth-child(4){
             width: 310px;
             border:0;
         }
@@ -88,50 +102,54 @@
             width: 100%;
             text-align: initial;
         }
-        .consignee-top,.consignee-bottom{
-            display:flex;
+        .goods td:nth-child(1){
+            width: 50%;
         }
-        .consignee-top{
-            margin-bottom:3px;
+        .goods td:nth-child(2){
+            width: 48%;
         }
-        .consignee-top div:nth-child(1),.consignee-bottom div:nth-child(1){
-            margin-right:265px;
+        tr:nth-child(9) td{
+            font-size: 12px;
+            
         }
-        .consignee-top div,.consignee-bottom div{
-            font-size: 15px;
-        }
-        tr:nth-child(6){
+        tr:nth-child(9){
             height:20px;
         }
-        tr:nth-child(6) td{
+        .picl div{
+            overflow: hidden;
+            display:inline-block;
+            width:70%;
+            height:80%;
+            margin-top:3px;
+            vertical-align: top;
             font-size: 12px;
+            outline: none;
+        }
+        .inp{
+            width: 70%;
+            height:20px;
+            border:0;
+            outline:none;
         }
     </style>
 </head>
 <body>
-    <div class="box">
+    <div class="box" id="paperque">
         <div class="top">
             送货单
         </div>
-        <div class="nav">
-            <div class="nav-top">
-                <div>
-                    收货人:
-                </div>
-                <div>
-                    NC
-                </div>
-            </div>
-            <div class="nav-bottom">
-                <div>
-                    地址:
-                </div>
-                <div>
-                    年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日
-                </div>
-            </div>
-        </div>
         <table cellspacing="0" cellpadding="0" border="1">
+            <!-- 上面的是头 -->
+            <tr class="picl">
+                <td colspan="2">收件人:<div contenteditable="true"></div></td>
+                <td colspan="2">NC</td>
+            </tr>
+            <tr class="picl">
+                <td colspan="2">单位名称:<div contenteditable="true"></div></td>
+                <td colspan="2">年月日</td>
+            </tr>
+
+            <!-- 在这个开始 -->
             <tr>
                 <td>货物名称</td>
                 <td>型号及规格</td>
@@ -140,44 +158,39 @@
                 <!-- <td></td> -->
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
                 <!-- <td></td> -->
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
                 <!-- <td></td> -->
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
                 <!-- <td></td> -->
             </tr>
-            <tr>
-                <td colspan="4" class="show">
-                    <div class="consignee">
-                        <div class="consignee-top">
-                            <div>收货单位:</div>
-                            <div>送货单位:</div>
-                        </div>
-                        <div class="consignee-bottom">
-                            <div>联系电话:</div>
-                            <div>签字:</div>
-                        </div>
-                    </div>
-                </td>
-                <!-- <td></td>
-                <td></td>
-                <td></td> -->
-                <!-- <td></td> -->
-            </tr>
+            <tr class="picl goods">
+                    <td colspan="2">收货单位:<input type="text" class="inp"></td>
+                    <td colspan="2">送货单位:<div contenteditable="true"></div></td>
+                </tr>
+                <tr class="picl goods">
+                    <td colspan="2">联系电话:<div contenteditable="true"></div></td>
+                    <td colspan="2">签字:</td>
+                </tr>
+                <!-- <td></td>收货单位
+                <td></td>送货单位
+                <td></td> 联系电话-->
+                <!-- <td>签字</td> -->
+            
             <tr>
                 <td colspan="4" class="show">
                     注：请您收到货物后,依定订单核实数量及型号规格,确认后请签字,感谢您对我公司的支持,谢谢配合！
@@ -185,16 +198,30 @@
             </tr>
         </table>
     </div>
+    <script  src="js/index.js"></script>
     <script src="js/jquery-1.11.3.js"></script>
-    
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/FileSaver.js"></script>
-        <script src="js/jquery.wordexport.js"></script>
+    <script src="js/jquery.wordexport.js"></script>
     <script>
-        $(function () {
-            $(".box").click(function (event) {
-                $(".word").wordExport('word文档');
+       function downloadword() {
+           var papername = null
+            $(".box").wordExport(papername);  //papername为导出的word文件的命名,paperque为要导出的html内容容器
+            html2canvas(document.getElementById("paperque"), {
+                onrendered: function (canvas) {
+                    //通过html2canvas将html渲染成canvas，然后获取图片数据
+                    var imgData = canvas.toDataURL('image/jpeg');
+                    //初始化pdf，设置相应格式
+                    var doc = new jsPDF("p", "mm", "a4");
+                    doc.setFillColor(0, 0, 0);
+                    //这里设置的是a4纸张尺寸
+                    doc.addImage(imgData, 'JPEG', 0, 0, 210, 297);
+                    //输出保存命名为content的pdf
+                    doc.save(papername + '.word');
+                }
             });
-        })
+        }
+        //downloadword()
     </script>
 </body>
 </html>
