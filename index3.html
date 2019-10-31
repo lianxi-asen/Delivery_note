@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width: 660px;
+            /* height:300px; */
+            /* background-color: red; */
+            margin:50px auto 0;
+        }
+        .top{
+            text-align:center;
+            font-size: 30px;
+            letter-spacing: .3rem;
+            font-weight: bold;
+            background-color: rgb(49,134,155);
+            color:#fff;
+        }
+        .nav{
+            border:0;
+            border-left:4px solid rgb(49,134,155);
+            border-right:4px solid rgb(49,134,155);
+        }
+        .nav-top,.nav-bottom{
+            display:flex;
+            justify-content:space-between;
+            padding:0 22px;
+            margin-top:5px;
+            
+        }
+        .nav-top,.nav-bottom div{
+            font-weight: 550;
+            font-size: 14px;
+        }
+        .nav-bottom div:nth-child(1){
+            letter-spacing: .5rem;
+        }
+        table{
+            width:100%;
+            /* height:300px; */
+            border:4px solid rgb(49,134,155);
+            /* border-top:1px dashed rgb(49,134,155); */
+            /* border-collapse:collapse; */
+            /* border-collapse: collapse; */
+            border-top:0;
+        }
+        tr{
+            border-top:1px dashed rgb(49,134,155);
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+
+        }
+        tr td{
+            display:inline-block;
+            border:0;
+            border-right:1px dashed rgb(49,134,155);
+            text-align: center;
+            height:100%;
+        }
+        tr:nth-child(1){
+            height:24px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        tr:nth-child(1) td:nth-child(1),tr:nth-child(2) td:nth-child(1),  tr:nth-child(3) td:nth-child(1),  tr:nth-child(4) td:nth-child(1){
+            width: 180px;
+        }
+        tr:nth-child(1) td:nth-child(2),tr:nth-child(2) td:nth-child(2),  tr:nth-child(3) td:nth-child(2),  tr:nth-child(4) td:nth-child(2){
+            width: 100px;
+        }
+        tr:nth-child(1) td:nth-child(3),tr:nth-child(2) td:nth-child(3),  tr:nth-child(3) td:nth-child(3),  tr:nth-child(4) td:nth-child(3){
+            width: 44px;
+        }
+        tr:nth-child(1) td:nth-child(4),tr:nth-child(2) td:nth-child(4),  tr:nth-child(3) td:nth-child(4),  tr:nth-child(4) td:nth-child(4){
+            width: 310px;
+            border:0;
+        }
+        .show{
+            width: 100%;
+            text-align: initial;
+        }
+        .consignee-top,.consignee-bottom{
+            display:flex;
+        }
+        .consignee-top{
+            margin-bottom:3px;
+        }
+        .consignee-top div:nth-child(1),.consignee-bottom div:nth-child(1){
+            margin-right:265px;
+        }
+        .consignee-top div,.consignee-bottom div{
+            font-size: 15px;
+        }
+        tr:nth-child(6){
+            height:20px;
+        }
+        tr:nth-child(6) td{
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top">
+            送货单
+        </div>
+        <div class="nav">
+            <div class="nav-top">
+                <div>
+                    收货人:
+                </div>
+                <div>
+                    NC
+                </div>
+            </div>
+            <div class="nav-bottom">
+                <div>
+                    地址:
+                </div>
+                <div>
+                    年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日
+                </div>
+            </div>
+        </div>
+        <table cellspacing="0" cellpadding="0" border="1">
+            <tr>
+                <td>货物名称</td>
+                <td>型号及规格</td>
+                <td>数量</td>
+                <td>备注</td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="4" class="show">
+                    <div class="consignee">
+                        <div class="consignee-top">
+                            <div>收货单位:</div>
+                            <div>送货单位:</div>
+                        </div>
+                        <div class="consignee-bottom">
+                            <div>联系电话:</div>
+                            <div>签字:</div>
+                        </div>
+                    </div>
+                </td>
+                <!-- <td></td>
+                <td></td>
+                <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="4" class="show">
+                    注：请您收到货物后,依定订单核实数量及型号规格,确认后请签字,感谢您对我公司的支持,谢谢配合！
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    
+    <script src="js/FileSaver.js"></script>
+        <script src="js/jquery.wordexport.js"></script>
+    <script>
+        $(function () {
+            $(".box").click(function (event) {
+                $(".word").wordExport('word文档');
+            });
+        })
+    </script>
+</body>
+</html>
