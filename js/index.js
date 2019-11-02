@@ -19,18 +19,19 @@
         ophone:[13701271307,13911832698,13910156186,18310700626,13501277901,13810318515,13910257336,13910885181,13801357871,13810149110,13701129191,13801104130,13501257787,13910276059,13801206963,15811142595,13911838196,15810374657,13811725722,13693273000,13801385114,18511900116,13901354401,13910283925,13311394168,15652523306,13911371572,13911673157,13911171015,13911005883,13426214060,13801085087,13511051576,18601288572,13901238892,13601303272,13911260318,13611055856,13601079786,13911832629,13701082952,13718153765,13911009250,13901307492,13311278055,13601261106,13370128678]
     }
     //获取第一个tr第一个td下面的div 收件人
-    var recipient = document.querySelector("tr:nth-child(1) td:nth-child(1) div")
+    var recipient = document.querySelector("tr:nth-child(1) td:nth-child(1) span")
     //单位名称
-    var entity = document.querySelector("tr:nth-child(2) td:nth-child(1) div")
+    var entity = document.querySelector("tr:nth-child(2) td:nth-child(1) span")
     //收货单位
     var ReceivingUnit = document.querySelector('tr:nth-child(7) td:nth-child(1) .inp')
     //console.log(ReceivingUnit)
     //联系电话
-    var ContactPhone = document.querySelector("tr:nth-child(8) td:nth-child(1) div")
+    var ContactPhone = document.querySelector("tr:nth-child(8) td:nth-child(1) span")
     //信号量
     var num = 0
     ReceivingUnit.onblur = function(){
         var val = ReceivingUnit.value
+        ReceivingUnit.value = val
         //console.log(val)
         if(obj.company.indexOf(val)!==-1){
             num = obj.company.indexOf(val)
